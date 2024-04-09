@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #000000, #030129, #021345);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main-btn {
+  display: flex;
+}
+
+.btn-space {
+  width: 20px;
+}
+
+.pad {
+  padding: 30px;
+}
+
+
+@keyframes color {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+
+}
+
+.face{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffcc0000;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.face::before{
+  content: '';
+  position: absolute;
+  top: 180px;
+  width: 180px;
+  height: 80px;
+  background: #e6e6e6;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  transition: 0.5s
+}
+.face:hover::before{
+  top: 210px;
+  width: 150px;
+  height: 20px;
+  background: #e6e6e6;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.eyes{
+  position: relative;
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.eyes .eye{
+  width: 100px;
+  height: 100px;
+  border: 15px solid;
+  border-color: #ffffff #00000000 #00000000 #ffffff;
+  border-radius: 50%;
+  transform: rotate(45deg) translateX(15px);
+  margin-right: 20px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.eyes .eye::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: eyeMovement 10s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@keyframes eyeMovement {
+  0% {
+    transform: translateX(-43px);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translateY(-43px);
   }
+  50% {
+    transform: translateX(-43px);
+  }
+  75% {
+    transform: translateY(-43px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+button {
+  padding: 10px 20px;
+  min-width: 120px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+#btn:hover,
+:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+.App {
+  text-align: center;
 }

@@ -1,0 +1,25 @@
+{
+    "cards": [
+      {
+        "id": 1,
+        "name": "Diamond Necklace",
+        "image": "diamond-necklace.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Emerald Ring",
+        "image": "emerald-ring.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Bob",
+        "image": "/images/diamond-necklace.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Emma",
+        "image": "/images/emerald-ring.jpg"
+      }
+    ]
+  }
+  

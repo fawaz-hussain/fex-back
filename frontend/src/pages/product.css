@@ -1,0 +1,23 @@
+.product-container {
+    position: relative;
+    margin: 100px 100px 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-image {
+    position: relative;
+    transform: scale(1.2);
+}
+
+.product-name {
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  .review-section{
+    display: flex;
+    justify-content: space-around;
+  }

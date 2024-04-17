@@ -2,7 +2,7 @@ import React from 'react'
 import fexback from '../images/fex-back.png'
 import '../App.css'
 
-const Home = () => {
+const Intro = () => {
   return (
     <div className='main'>
         <div className="face">
@@ -22,4 +22,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Intro
